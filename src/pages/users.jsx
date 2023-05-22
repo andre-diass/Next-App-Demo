@@ -14,6 +14,8 @@ export default function Users(props) {
 }
 
 export async function getStaticProps() {
+  //runs on the server side, that's why if I console log the data, it will shown in the
+  //terminal and not on the browser console
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await response.json();
 
