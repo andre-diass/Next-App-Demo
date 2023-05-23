@@ -10,6 +10,7 @@ export default function Post({ post }) {
 }
 
 //the key paths determines wich paths to be statically generated at build time; the key is an array of objects; each object contains a params key, wich in turn is an object that contais the router parameter with its value; the return object must also contain a key called fallback
+/*
 export async function getStaticPaths() {
   return {
     paths: [
@@ -17,6 +18,25 @@ export async function getStaticPaths() {
       { params: { postsID: "2" } },
       { params: { postsID: "3" } },
     ],
+    fallback: false,
+  };
+}
+*/
+
+//I can also fetch a specific number of parameters and create paths dinamically using those paremeters
+export async function getStaticPaths() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await response.json();
+
+  const paths = data.map((post) => {
+    return {
+      params: {
+        postsID: `${post.id}`,
+      },
+    };
+  });
+  return {
+    paths,
     fallback: false,
   };
 }
