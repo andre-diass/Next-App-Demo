@@ -10,6 +10,8 @@ export default function Post({ post }) {
 }
 
 //the key paths determines wich paths to be statically generated at build time; the key is an array of objects; each object contains a params key, wich in turn is an object that contais the router parameter with its value; the return object must also contain a key called fallback
+
+//this is basically going to give the under brackest [] parameters its values
 /*
 export async function getStaticPaths() {
   return {
