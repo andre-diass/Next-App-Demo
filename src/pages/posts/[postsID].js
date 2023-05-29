@@ -43,6 +43,7 @@ export async function getStaticPaths() {
   };
 }
 
+//this context parameter is an object wich contains a key called params; this method of getting the endpoint dynamic parameter workd the same way if I use getServerSideProps
 export async function getStaticProps(context) {
   let { params } = context;
   const response = await fetch(
