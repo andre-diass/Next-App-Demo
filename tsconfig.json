@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "docs/[...params].jsx", "src/pages/users.jsx", "src/pages/posts/index.js", "src/pages/api/hello.js", "src/pages/getRequest.js", "src/pages/api/comments/[commentId].jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "docs/[...params].jsx", "src/pages/users.jsx", "src/pages/posts/index.js", "src/pages/api/hello.js", "src/pages/getRequest.js", "src/pages/api/comments/[commentId].jsx", "src/pages/_app.jsx"],
   "exclude": ["node_modules"]
 }
